@@ -1,0 +1,23 @@
+&lorenz96nl
+ dimX = 20,
+ dimY = 8,
+ intscheme = 1,
+ inittype = 6,
+ spinup = 1000,
+ restartint = 100,
+ tl = 1,
+ gin = 1,
+ dt = 0.01,
+ samplerate = 100,
+ timeint = 1000,
+ F = 10,
+ hx = 1,
+ hy = 1,
+ eps = 0.1,
+ c = 1,
+ b = 1,
+ saveswitch = 1,
+ correlationtend = 0,
+ ensemble=1
+&END
+

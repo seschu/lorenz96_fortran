@@ -9,7 +9,7 @@ integer :: dimX
 integer :: dimY !
 integer :: dimF ! Total dimension
 integer :: intscheme ! 1 ... Runge Kutta 4th order
-integer :: inittype ! 1 ... random , 2 ... stationary+random perturb , 3... stationary , 4 restart, 5 start with certain initialstate (initialstate.dat), 6 use time given in 
+integer :: inittype ! 1 ... random , 2 ... stationary+random perturb , 3... stationary , 4 restart, 5 start with certain initialstate (initialstate.dat), 6 use time given in spinup
 integer :: tl! GS is activated
 integer :: gin ! CLV computation is activated ** not implemented **
 real(kind=8) :: dt! Timestep
@@ -334,7 +334,7 @@ do ens=1,ensemble
       powerx3=powerx3+sum(x(1:dimX)**3.0d0)/dble(dimX)/dble(n_field)
       powerx4=powerx4+sum(x(1:dimX)**4.0d0)/dble(dimX)/dble(n_field)
       !	(*,*) powerx1,dble(dimX),dble(n_field)
-      if (mod(istep,floor(dble(n_field)/10.0d0)).eq.0) then
+      if (mod(istep,floor(dble(n_field)/1.0d0)).eq.0) then
 	  call system_clock ( t2, clock_rate, clock_max )
 	  call progress(floor(dble(istep)/dble(n_field/10.0d0))+1)
 	  elapsed=real ( t2 - t1 ) / real ( clock_rate )
@@ -677,7 +677,7 @@ real(kind=8) :: F,hx,hy,eps,c,b,factor
 if (dimY>0) then
 factor=hx*c/b/dble(dimY)
 else
-factor=hx*c/b
+factor=0
 endif
 ! For the x at the (connected) boundary of the chain
 ! i==1
@@ -840,7 +840,7 @@ end do
 end if
 end
 
-
+			  
 subroutine rungekutta4thtl(tanglin,xold,k1,k2,k3,k4,F,hx,hy,eps,c,b,dt,dimX,dimY,dimF)
 implicit none
 ! Perform Runge Kutta 4th Order Steps 
@@ -851,6 +851,7 @@ real(kind=8),dimension(dimF,dimF) :: t1,t2,t3,t4,t1h,t2h,t3h,t4h,one,tanglin
 
 dt2=dt/2.0d0
 dt6=dt/6.0d0
+
 call tangent_linear(t1,xold,F,hx,hy,eps,c,b,dimX,dimY,dimF)
 xdummy=xold+dt/2.0d0*k1
 call tangent_linear(t2,xdummy,F,hx,hy,eps,c,b,dimX,dimY,dimF)
