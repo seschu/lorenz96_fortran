@@ -35,3 +35,7 @@ ifort -r8 -O3 -assume byterecl -mkl lorenz96v5.90 -o l96.x
 # Namelist parameters meaning
 
 < to be included>
+
+# Execute Programm
+
+./l96.x < namelist
