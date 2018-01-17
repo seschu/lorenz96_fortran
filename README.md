@@ -24,11 +24,12 @@ Schubert, S., & Lucarini, V. (2015). Covariant Lyapunov vectors of a quasi-geost
 
 Schubert, S., & Lucarini, V. (2016). Dynamical analysis of blocking events: spatial and temporal fluctuations of covariant Lyapunov vectors. Quarterly Journal of the Royal Meteorological Society, 142(698), 2143–2158. http://doi.org/10.1002/qj.2808
 
-##### On the Model Code ######
+# On the Model Code
 
 # Compilation
 
 export MKL_NUM_THREADS=8 # choose number of mkl threads
+
 ifort -r8 -O3 -assume byterecl -mkl lorenz96v5.90 -o l96.x
 
 # Namelist parameters meaning
