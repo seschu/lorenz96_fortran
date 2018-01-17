@@ -1,8 +1,8 @@
 # Lorenz 96 with Ginelli et al Algorithm for computing Covaraint Lyapunov Vectors (CLVs)
-# by Sebastian Schubert (https://www.mi.uni-hamburg.de/arbeitsgruppen/theoretische-meteorologie/personen/schubert-sebastian.html)
-# E-Mail: sebastian.schubert)at(uni-hamburg.de
+by Sebastian Schubert (https://www.mi.uni-hamburg.de/arbeitsgruppen/theoretische-meteorologie/personen/schubert-sebastian.html)
+E-Mail: sebastian.schubert)at(uni-hamburg.de
 
-##### General References #####
+# General References #
 # On the Lorenz 96 
 
 Lorenz, E. N. (1996). Predictability - A problem partially solved. In Proc. Seminar on predictability.
