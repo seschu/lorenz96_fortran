@@ -1,5 +1,6 @@
 # Lorenz 96 with Ginelli et al Algorithm for computing Covaraint Lyapunov Vectors (CLVs)
 by Sebastian Schubert (https://www.mi.uni-hamburg.de/arbeitsgruppen/theoretische-meteorologie/personen/schubert-sebastian.html)
+
 E-Mail: sebastian.schubert)at(uni-hamburg.de
 
 # General References #
