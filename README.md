@@ -1,7 +1,7 @@
 # Lorenz 96 with Ginelli et al Algorithm for computing Covariant Lyapunov Vectors (CLVs)
 by Sebastian Schubert (https://www.mi.uni-hamburg.de/arbeitsgruppen/theoretische-meteorologie/personen/schubert-sebastian.html)
 
-E-Mail: sebastian.schubert)at(uni-hamburg.de
+E-Mail: sebastian-schubert(at)posteo.de
 
 # General References #
 # On the Lorenz 96 
